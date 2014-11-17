@@ -1,0 +1,1 @@
+Jonathan Ferm är uppvuxen i Sandviken, men har bott i Linköping i snart 4 år.
