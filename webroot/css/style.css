@@ -3,6 +3,7 @@
  */
 
 @import url(figure.css);
+@import url(comments.css);
 
 body {
   color: #000;
@@ -99,4 +100,12 @@ p{
 
 .byline p {
   margin-top: 0;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
 }

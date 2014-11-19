@@ -1,1 +1,1 @@
-<p>Copyright (c) 2014 Jonathan Ferm</p>
+<p>Copyright (c) 2014 Jonathan Ferm | <a href='https://github.com/JonteFerm/Anax-MVC'>Mitt Anax-MVC på GitHub</a></p>

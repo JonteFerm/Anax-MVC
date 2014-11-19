@@ -22,7 +22,19 @@ return [
         'redovisning' => [
             'text' => 'Redovisning',
             'url' => 'redovisning',
-            'title' => 'Internal route within this frontcontroller'
+            'title' => 'Internal route within this frontcontroller',
+        ],
+
+        'guestbook' => [
+            'text' => 'Gästbok',
+            'url' => 'guestbook',
+            'title' => 'Internal route within this frontcontroller',
+        ],
+
+        'guestbook2' => [
+            'text' => 'Gästbok 2',
+            'url' => 'guestbook2',
+            'title' => 'Internal route within this frontcontroller',
         ],
 
         'source' => [

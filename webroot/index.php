@@ -4,6 +4,12 @@ $app->theme->configure(ANAX_APP_PATH . 'config/theme_me.php');
 $app->navbar->configure(ANAX_APP_PATH. 'config/navbar_me.php');
 $app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
 
+$di->set('CommentController', function() use ($di) {
+    $controller = new Phpmvc\Comment\CommentController();
+    $controller->setDI($di);
+    return $controller;
+});
+
 $app->router->add('', function() use ($app){
 	$app->theme->setTitle("Hem");
 	$content = $app->fileContent->get('me.md');
@@ -45,6 +51,62 @@ $app->router->add('source', function() use ($app){
 	$app->views->add('me/source', [
 		'content' => $source->View(),
 	]);
+});
+
+$app->router->add('guestbook', function() use ($app){
+	$app->theme->setTitle("Gästbok");
+
+	$app->theme->setTitle("Welcome to Anax Guestbook");
+	$app->views->add('comment/index');
+
+	$app->dispatcher->forward([
+	    'controller' => 'comment',
+	    'action'     => 'viewImproved',
+	    'params'	 => ['identifier' => 'guestbook', 'redirect' => 'guestbook'],
+	]);
+
+	    
+	$app->views->add('comment/form', [
+	    'mail'      => null,
+	    'web'       => null,
+	    'name'      => null,
+	    'content'   => null,
+	    'output'    => null,
+	    'image'     => null,
+	    'identifier' => 'guestbook',
+	    'redirect' => 'guestbook',
+
+
+	]);
+
+});
+
+$app->router->add('guestbook2', function() use ($app){
+	$app->theme->setTitle("Gästbok 2");
+
+	$app->theme->setTitle("Welcome to Anax Guestbook");
+	$app->views->add('comment/index');
+
+	$app->dispatcher->forward([
+	    'controller' => 'comment',
+	    'action'     => 'viewImproved',
+	    'params'	 => ['identifier' => 'guestbook2', 'redirect' => 'guestbook2'],
+	]);
+
+	    
+	$app->views->add('comment/form', [
+	    'mail'      => null,
+	    'web'       => null,
+	    'name'      => null,
+	    'content'   => null,
+	    'output'    => null,
+	    'image'     => null,
+	   	'identifier' => 'guestbook2',
+	    'redirect' => 'guestbook2',
+
+
+	]);
+
 });
 
 $app->router->handle();
