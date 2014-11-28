@@ -84,6 +84,7 @@ p{
   width: 700px;
   border-right: 1px solid #ccc;
   padding-right: 1em;
+  margin-left: 1em;
 }
 
 .article1 h1,
@@ -109,3 +110,22 @@ p{
 .right{
   float: right;
 }
+
+ul{
+  list-style-type:none;
+  padding: 0;
+}
+
+ul li a{
+  color: #000;
+  text-decoration:udnerline;
+}
+
+ul li a:hover{
+  text-decoration:none;
+}
+
+fieldset{
+  margin-left: 0;
+}
+

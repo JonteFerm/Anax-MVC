@@ -37,6 +37,42 @@ return [
             'title' => 'Internal route within this frontcontroller',
         ],
 
+        'Tema' => [
+            'text' => 'Tema',
+            'url' => 'theme_ferm.php',
+            'title' => 'Internal route within this frontcontroller',
+        ],
+        'users' => [
+            'text' => 'Användare',
+            'url' => 'users',
+            'title' => 'Internal route within this frontcontroller',
+        ],
+
+        'test'  => [
+            'text'  => 'Tester',
+            'url'   => $this->di->get('url')->createRelative(''),
+            'title' => 'Submenu with url to relative frontcontroller',
+
+            'submenu' => [
+
+                'items' => [
+
+                    // This is a menu item of the submenu
+                    'item 1'  => [
+                        'text'  => 'Form Test',
+                        'url'   => $this->di->get('url')->createRelative('formtest'),
+                        'title' => 'Testa forms',
+                    ],
+                    'item 2'  => [
+                        'text'  => 'DB Test',
+                        'url'   => $this->di->get('url')->createRelative('dbtest'),
+                        'title' => 'Testa databas',
+                    ],
+
+                ],
+            ],
+        ],
+
         'source' => [
             'text' => 'Källkod',
             'url' => 'source',
